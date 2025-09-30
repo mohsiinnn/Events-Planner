@@ -17,7 +17,7 @@ const eventScheema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ["Work", "Personal", "School", "Other"],
+        enum: ["Work", "Personal", "Study", "Other"],
         trim: true
     }
 }, { timestamps: true })
