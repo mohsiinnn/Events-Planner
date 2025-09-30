@@ -12,7 +12,7 @@ const allowedOrigins = ['http://localhost:5173']
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ origin: allowedOrigins }))
+app.use(cors({ origin: allowedOrigins, credentials: true }))
 
 app.get('/', (req, res) => {
     res.send('Welcome to Event Planer');
