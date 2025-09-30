@@ -79,7 +79,7 @@ export const deleteEvent = createAsyncThunk(
         try {
             const res = await eventService.deleteEvent(id)
             if (!res?.success) throw new Error(res?.message || "Delete failed");
-            return { ...res, idArg: id }; // keep id just in case
+            return { ...res, idArg: id }; // id just in case
         } catch (err) {
             const m = err.response?.data?.message || err.message || String(err);
             return thunkAPI.rejectWithValue(m);
