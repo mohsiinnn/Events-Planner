@@ -5,7 +5,7 @@ import cors from 'cors'
 import eventRouter from './routes/eventRoutes.js';
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 connectDB()
 
 const allowedOrigins = ['http://localhost:5173']
@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/event', eventRouter)
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`);
 });
