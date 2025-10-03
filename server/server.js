@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 connectDB()
 
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = ['https://events-planner-lemon.vercel.app']
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
